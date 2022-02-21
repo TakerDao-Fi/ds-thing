@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 // thing.sol - `auth` with handy mixins. your things should be DSThings
 
 // Copyright (C) 2017  DappHub, LLC
@@ -15,7 +17,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity >=0.4.23;
+pragma solidity >=0.6.12;
 
 import 'ds-auth/auth.sol';
 import 'ds-note/note.sol';
