@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 // thing.sol - `auth` with handy mixins. your things should be DSThings
 
 // Copyright (C) 2017  DappHub, LLC
@@ -15,11 +17,15 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity ^0.4.13;
+pragma solidity >=0.6.12;
 
 import 'ds-auth/auth.sol';
 import 'ds-note/note.sol';
 import 'ds-math/math.sol';
 
 contract DSThing is DSAuth, DSNote, DSMath {
+    function S(string memory s) internal pure returns (bytes4) {
+        return bytes4(keccak256(abi.encodePacked(s)));
+    }
+
 }
